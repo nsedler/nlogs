@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import image from './assets/images/nlogs.jpg'
+import NavBar from './components/NavBar.vue'
 
 Vue.config.productionTip = false;
 

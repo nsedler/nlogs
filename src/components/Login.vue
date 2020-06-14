@@ -1,7 +1,7 @@
 <template>
 	<div id="login">
 		<div id="logo">
-			<img :src="require('@/assets/images/nlogs.jpg')" alt="NLogs">
+			<img :src="require('@/assets/images/Nlogs.png')" alt="NLogs">
 		</div>
 		<div id="form">
 			<p v-if="incorrect">Incorrect username/password</p>
@@ -22,29 +22,28 @@
 
 <script lang="ts">
 
-import { Component, Vue } from 'vue-property-decorator';
-import image from '../assets/images/nlogs.jpg'
+	import { Component, Vue } from 'vue-property-decorator';
 
-require('dotenv').config()
+	require('dotenv').config()
 
-@Component
-export default class Login extends Vue {
-	
-	username = '';
-	password = '';
-	incorrect = false; 
+	@Component
+	export default class Login extends Vue {
 		
-	login(): void {
-		if(this.username == process.env.VUE_APP_USER && this.password == process.env.VUE_APP_PASSWORD) {
-			this.$router.push('test');
-		} else {
-			this.incorrect = true;
+		username = '';
+		password = '';
+		incorrect = false; 
+		
+		login(): void {
+			if(this.username == process.env.VUE_APP_USER && this.password == process.env.VUE_APP_PASSWORD) {
+				this.$router.push('home');
+			} else {
+				this.incorrect = true;
+			}
 		}
 	}
-}
 </script>
 
-<style>
+<style scoped>
 	#login #form {
 		position: absolute;
 		border-radius: 25px;
@@ -88,7 +87,7 @@ export default class Login extends Vue {
 		position:absolute;
 		left: 50%;
 		top: 5%;
-		transform: translate(-50%, -5%);
+		transform: translate(-50%, 0%);
 		font-size: 4vw;
 	}
 

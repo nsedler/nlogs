@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from './components/Login.vue'
+import NavBar from './components/NavBar.vue'
 
 Vue.use(VueRouter)
 
@@ -16,7 +17,7 @@ const router = new VueRouter ({
         path: '/home',
         name: 'home',
         meta: { title: 'NLogs | Home' },
-        component: () => { return import ('./views/HomePage.vue') }
+        component: NavBar
     }]
 });
 const DEFAULT_TITLE = "Nlogs| Error";

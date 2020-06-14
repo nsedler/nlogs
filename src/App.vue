@@ -16,6 +16,6 @@ export default class App extends Vue {
 	@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap');
 	body {
 		font-family: 'Fira Code', monospace;
-		background-color: #011627;
+		background-color: #023259;
 	}
 </style>
